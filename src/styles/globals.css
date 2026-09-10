@@ -3,6 +3,7 @@
 @layer base {
   :root {
     --paper: #F5F0E6;
+    --cream-light: #F8F4EC;
     --cream: #EFE8DB;
     --paper-deep: #E8DFCF;
 

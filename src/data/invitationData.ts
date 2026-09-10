@@ -108,16 +108,16 @@ export const invitationData: InvitationData = {
   },
   venue: {
     name: "The Garden House",
-    address: "123 Garden Lane, Chipping Campden",
+    address: "Chipping Campden Estate",
     city: "Cotswolds, Gloucestershire",
     postcode: "GL55 6AT",
     country: "United Kingdom",
-    description: "An enchanting glasshouse nestled in the heart of the Cotswolds, surrounded by centuries-old olive groves, organic botanical gardens, and historic stone arches.",
+    description: "An enchanting glasshouse conservatory nestled in the heart of the Cotswolds, surrounded by ancient olive groves, organic botanical gardens, and historic stone arches.",
     mapsUrl: "https://maps.google.com/?q=Chipping+Campden+Cotswolds",
     embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39445.69871587399!2d-1.792556531393652!3d52.05141154564811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870c4974261bd71%3A0x6334f59c8fa7270!2sChipping%20Campden!5e0!3m2!1sen!2suk!4v1700000000000"
   },
   hero: {
-    eyebrow: "Together With Their Families",
+    eyebrow: "TOGETHER WITH THEIR FAMILIES",
     title: "Olivia & James",
     subtitle: "Invite you to share in their joy as they join their lives in marriage",
     scrollCTA: "Scroll to Discover"
@@ -136,7 +136,7 @@ export const invitationData: InvitationData = {
     {
       time: "3:30 PM",
       title: "Guest Arrival",
-      description: "Welcome botanical cocktails and acoustic violin music in the walled garden.",
+      description: "Welcome botanical drinks and acoustic music in the walled garden.",
       location: "The Glasshouse Lawn"
     },
     {
@@ -153,14 +153,14 @@ export const invitationData: InvitationData = {
     },
     {
       time: "7:00 PM",
-      title: "Candlelit Dinner & Speeches",
-      description: "A three-course seasonal farm-to-table banquet and toasts.",
+      title: "Candlelit Dinner & Toasts",
+      description: "A three-course seasonal farm-to-table banquet and speeches.",
       location: "The Grand Pavilion"
     },
     {
       time: "9:00 PM",
       title: "Cake Cutting & Dancing",
-      description: "Live band, cocktail bar, and dancing under the stars.",
+      description: "Live acoustic orchestra, cocktail bar, and dancing under the stars.",
       location: "The Garden Ballroom"
     },
     {
@@ -213,11 +213,11 @@ export const invitationData: InvitationData = {
     subtitle: "Earthy tones & elegant attire",
     description: "We kindly invite our guests to dress in formal garden attire. Subtle botanical shades, soft olive greens, sage, warm cream, warm beige, and classic dark suits or tuxedos are warmly encouraged.",
     swatches: [
-      { hex: "#556B2F", label: "Olive Green" },
-      { hex: "#8A9A7B", label: "Muted Sage" },
-      { hex: "#D4C5B9", label: "Warm Linen" },
-      { hex: "#E8ECE3", label: "Soft Cream" },
-      { hex: "#232B1E", label: "Forest Dark" }
+      { hex: "#697052", label: "Olive Green" },
+      { hex: "#7D876D", label: "Muted Sage" },
+      { hex: "#A79B89", label: "Warm Linen" },
+      { hex: "#E8DFCF", label: "Soft Cream" },
+      { hex: "#283024", label: "Forest Dark" }
     ],
     notes: "Please note that parts of the reception will be held on garden lawns. Ladies may wish to consider block heels or wedge footwear for comfort."
   },
@@ -239,9 +239,9 @@ export const invitationData: InvitationData = {
     honeymoonFundNote: "A card box will also be available at the reception venue.",
     bankDetails: {
       accountHolder: "Olivia Sterling & James Montgomery",
-      bankName: "Heritage Private Bank UK",
-      iban: "GB29 HERI 1234 5678 9012 34",
-      swift: "HERIGB2L"
+      bankName: "Private Wedding Account",
+      iban: "GB00 DEMO 0000 0000 0000 00",
+      swift: "DEMOGB2L"
     }
   }
 };
