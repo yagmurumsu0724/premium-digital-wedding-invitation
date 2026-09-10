@@ -5,8 +5,50 @@ interface BotanicalProps {
   color?: string;
 }
 
+export const WaxSealStamp: React.FC<{ className?: string; initials?: string }> = ({ 
+  className = "w-24 h-24 sm:w-32 sm:h-32", 
+  initials = "O & J" 
+}) => (
+  <div className={`relative flex items-center justify-center select-none ${className}`}>
+    <svg 
+      viewBox="0 0 120 120" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full drop-shadow-md"
+    >
+      {/* Wax Seal Outer Organic Rim */}
+      <path 
+        d="M60 6 C 75 4, 88 12, 98 22 C 108 32, 116 45, 114 60 C 112 75, 106 88, 96 98 C 86 108, 72 116, 58 114 C 43 112, 30 106, 20 96 C 10 86, 4 72, 6 57 C 8 42, 16 28, 26 18 C 36 8, 48 8, 60 6 Z" 
+        fill="#AA9669" 
+        stroke="#8C7A52" 
+        strokeWidth="1.5" 
+      />
+      <path 
+        d="M60 10 C 73 8, 84 15, 93 24 C 102 33, 109 44, 107 57 C 105 70, 100 82, 91 91 C 82 100, 69 107, 56 105 C 43 103, 31 97, 23 88 C 15 79, 10 67, 12 54 C 14 41, 21 28, 30 19 C 39 10, 50 10, 60 10 Z" 
+        fill="#9C875B" 
+      />
+
+      {/* Inner Pressed Circle Ring */}
+      <circle cx="60" cy="60" r="42" stroke="#7A6A45" strokeWidth="1.2" fill="none" opacity="0.6" />
+      <circle cx="60" cy="60" r="39" stroke="#BCA778" strokeWidth="0.8" strokeDasharray="3 2" fill="none" opacity="0.8" />
+
+      {/* Fine Botanical Engraving Wreath inside Seal */}
+      <circle cx="60" cy="60" r="34" stroke="#5A4D30" strokeWidth="0.5" fill="none" opacity="0.4" />
+      <path d="M60 28 C 54 22, 46 25, 55 27 Z" fill="#5A4D30" opacity="0.6" />
+      <path d="M60 28 C 66 22, 74 25, 65 27 Z" fill="#5A4D30" opacity="0.6" />
+      <path d="M60 92 C 54 98, 46 95, 55 93 Z" fill="#5A4D30" opacity="0.6" />
+      <path d="M60 92 C 66 98, 74 95, 65 93 Z" fill="#5A4D30" opacity="0.6" />
+    </svg>
+
+    {/* Pressed Monogram Initials */}
+    <span className="absolute font-serif text-xl sm:text-2xl font-normal text-[#FDFBF7] drop-shadow-xs tracking-widest">
+      {initials}
+    </span>
+  </div>
+);
+
 export const EngravedBranchLeft: React.FC<BotanicalProps> = ({ 
-  className = "w-32 h-44 md:w-48 md:h-64", 
+  className = "w-28 h-40 md:w-48 md:h-64", 
   color = "var(--olive)" 
 }) => (
   <svg 
@@ -15,7 +57,6 @@ export const EngravedBranchLeft: React.FC<BotanicalProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     className={`select-none pointer-events-none ${className}`}
   >
-    {/* Fine organic main stem with varying line weights */}
     <path 
       d="M30 210 C 50 160, 75 110, 135 15" 
       stroke={color} 
@@ -30,21 +71,13 @@ export const EngravedBranchLeft: React.FC<BotanicalProps> = ({
       opacity="0.4" 
     />
 
-    {/* Fine leaf engravings with inner hatching lines */}
     <path d="M42 180 C 15 165, 10 142, 38 152 C 55 160, 48 175, 42 180 Z" stroke={color} strokeWidth="0.85" fill={color} fillOpacity="0.08" />
-    <path d="M28 162 C 34 167, 40 170, 42 180" stroke={color} strokeWidth="0.4" opacity="0.6" />
-
     <path d="M58 150 C 85 135, 95 118, 70 130 C 52 138, 55 145, 58 150 Z" stroke={color} strokeWidth="0.85" fill={color} fillOpacity="0.12" />
-    <path d="M68 138 C 62 144, 59 148, 58 150" stroke={color} strokeWidth="0.4" opacity="0.6" />
-
     <path d="M68 120 C 38 108, 30 88, 58 98 C 72 104, 68 115, 68 120 Z" stroke={color} strokeWidth="0.85" fill={color} fillOpacity="0.08" />
-    <path d="M48 108 C 55 112, 62 116, 68 120" stroke={color} strokeWidth="0.4" opacity="0.6" />
-
     <path d="M88 90 C 115 78, 125 60, 98 72 C 82 78, 85 86, 88 90 Z" stroke={color} strokeWidth="0.85" fill={color} fillOpacity="0.1" />
     <path d="M102 60 C 78 48, 70 30, 95 38 C 108 44, 104 55, 102 60 Z" stroke={color} strokeWidth="0.85" fill={color} fillOpacity="0.08" />
     <path d="M120 32 C 142 20, 150 8, 128 15 C 115 20, 118 28, 120 32 Z" stroke={color} strokeWidth="0.85" fill={color} fillOpacity="0.15" />
 
-    {/* Olive berries */}
     <circle cx="48" cy="158" r="3.5" stroke={color} strokeWidth="0.8" fill="var(--paper)" />
     <circle cx="78" cy="100" r="3.5" stroke={color} strokeWidth="0.8" fill="var(--paper)" />
     <circle cx="110" cy="45" r="3" stroke={color} strokeWidth="0.8" fill="var(--paper)" />
@@ -52,7 +85,7 @@ export const EngravedBranchLeft: React.FC<BotanicalProps> = ({
 );
 
 export const EngravedBranchRight: React.FC<BotanicalProps> = ({ 
-  className = "w-32 h-44 md:w-48 md:h-64", 
+  className = "w-28 h-40 md:w-48 md:h-64", 
   color = "var(--olive)" 
 }) => (
   <div className="transform -scale-x-100">
@@ -85,7 +118,7 @@ export const EngravedWreath: React.FC<BotanicalProps> = ({
 );
 
 export const EngravedDivider: React.FC<BotanicalProps> = ({ 
-  className = "w-48 h-8 md:w-64 md:h-10", 
+  className = "w-44 h-8 sm:w-64 sm:h-10", 
   color = "var(--sage)" 
 }) => (
   <svg 
@@ -108,7 +141,7 @@ export const EngravedDivider: React.FC<BotanicalProps> = ({
 );
 
 export const EngravedVerticalStem: React.FC<BotanicalProps> = ({ 
-  className = "w-12 h-64", 
+  className = "w-10 h-56", 
   color = "var(--sage)" 
 }) => (
   <svg 
@@ -126,7 +159,7 @@ export const EngravedVerticalStem: React.FC<BotanicalProps> = ({
 );
 
 export const EngravedCornerAccents: React.FC<BotanicalProps> = ({ 
-  className = "w-24 h-24", 
+  className = "w-20 h-20", 
   color = "var(--olive)" 
 }) => (
   <svg 
@@ -142,7 +175,7 @@ export const EngravedCornerAccents: React.FC<BotanicalProps> = ({
 );
 
 export const EngravedEmblem: React.FC<BotanicalProps> = ({ 
-  className = "w-12 h-12", 
+  className = "w-10 h-10", 
   color = "var(--olive)" 
 }) => (
   <svg 

@@ -9,31 +9,31 @@ export const FooterSection: React.FC = () => {
   };
 
   return (
-    <footer className="py-24 md:py-32 px-6 bg-[var(--paper-deep)] border-t border-[var(--olive)]/20 relative text-center">
+    <footer className="py-20 sm:py-28 px-4 sm:px-6 bg-[#283024] text-[#F5F0E6] relative text-center border-t border-[#697052]/30">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Monogram Emblem */}
         <div className="relative mb-6">
-          <EngravedWreath className="w-28 h-28 text-[var(--olive)]" />
-          <div className="absolute inset-0 flex items-center justify-center font-serif text-2xl text-[var(--ink)] font-normal">
+          <EngravedWreath className="w-28 h-28 text-[#AA9669]" />
+          <div className="absolute inset-0 flex items-center justify-center font-serif text-2xl text-[#F5F0E6] font-normal">
             {invitationData.couple.initials}
           </div>
         </div>
 
-        <EngravedEmblem className="w-10 h-10 mb-4 text-[var(--sage)]" />
+        <EngravedEmblem className="w-10 h-10 mb-4 text-[#7D876D]" />
 
         {/* Couple Names */}
-        <h3 className="font-serif text-3xl md:text-5xl text-[var(--ink)] font-normal mb-2">
+        <h3 className="font-serif text-3xl sm:text-5xl text-[#F5F0E6] font-normal mb-2">
           {invitationData.couple.firstPerson} &amp; {invitationData.couple.secondPerson}
         </h3>
 
-        <EngravedDivider className="w-48 h-8 my-2 text-[var(--sage)]" />
+        <EngravedDivider className="w-40 sm:w-48 h-8 my-2 text-[#7D876D]" />
 
-        <p className="font-serif italic text-lg text-[var(--olive-deep)] max-w-md my-4 font-light">
+        <p className="font-serif italic text-base sm:text-lg text-[#EDE5D6]/90 max-w-md my-4 font-light">
           “WITH LOVE • WE LOOK FORWARD TO CELEBRATING WITH YOU.”
         </p>
 
         {/* Date Display */}
-        <p className="font-sans text-xs uppercase tracking-[0.22em] text-[var(--olive)] font-semibold my-4">
+        <p className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#AA9669] font-semibold my-4">
           {invitationData.date.display} • {invitationData.venue.name}
         </p>
 
@@ -42,7 +42,7 @@ export const FooterSection: React.FC = () => {
           <button
             onClick={scrollToTop}
             aria-label="Scroll back to top"
-            className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.22em] text-[var(--taupe)] hover:text-[var(--olive)] transition-colors focus:outline-none cursor-pointer"
+            className="inline-flex items-center space-x-2 text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#7D876D] hover:text-[#AA9669] transition-colors focus:outline-none cursor-pointer"
           >
             <span>BACK TO TOP</span>
             <ArrowUp className="w-3.5 h-3.5 stroke-[1.5]" />
@@ -50,7 +50,7 @@ export const FooterSection: React.FC = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-[var(--olive)]/15 w-full font-sans text-[10px] text-[var(--taupe)] tracking-widest uppercase">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-[#697052]/25 w-full font-sans text-[10px] text-[#A79B89] tracking-widest uppercase">
           <p>© {new Date().getFullYear()} {invitationData.couple.firstPerson} &amp; {invitationData.couple.secondPerson} Wedding Stationery.</p>
         </div>
       </div>
