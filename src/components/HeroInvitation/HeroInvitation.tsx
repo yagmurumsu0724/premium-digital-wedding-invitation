@@ -9,12 +9,15 @@ export const HeroInvitation: React.FC = () => {
       id="hero" 
       className="relative min-h-[92vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-28 pb-16 overflow-hidden bg-[#F5F0E6]"
     >
-      {/* Asymmetric Corner Engraved Botanical Illustration Accents */}
-      <div className="absolute top-8 left-2 sm:left-6 opacity-60 pointer-events-none hidden sm:block">
-        <EngravedBranchLeft className="w-28 h-40 sm:w-44 sm:h-60 text-[#697052]" />
+      {/* Controlled Asymmetrical Engraved Botanical Illustration Accents */}
+      {/* Top Right Corner Botanical Branch */}
+      <div className="absolute top-6 right-2 sm:right-6 opacity-75 pointer-events-none hidden sm:block">
+        <EngravedBranchRight className="w-36 h-52 sm:w-56 sm:h-72 text-[#697052]" />
       </div>
-      <div className="absolute top-8 right-2 sm:right-6 opacity-60 pointer-events-none hidden sm:block">
-        <EngravedBranchRight className="w-28 h-40 sm:w-44 sm:h-60 text-[#697052]" />
+
+      {/* Lower Left Corner Botanical Branch */}
+      <div className="absolute bottom-6 left-2 sm:left-6 opacity-75 pointer-events-none hidden sm:block">
+        <EngravedBranchLeft className="w-36 h-52 sm:w-56 sm:h-72 text-[#697052]" />
       </div>
 
       <motion.div 
@@ -28,14 +31,14 @@ export const HeroInvitation: React.FC = () => {
           {invitationData.hero.eyebrow}
         </p>
 
-        {/* Main Couple Names - Primary Visual Focus */}
-        <h1 className="font-serif text-4xl sm:text-7xl lg:text-9xl font-normal text-[#283024] leading-[0.95] tracking-tight uppercase mb-4 sm:mb-6 w-full">
+        {/* Main Couple Names - Primary Visual Focus with Controlled Vertical Rhythm */}
+        <h1 className="font-serif text-4xl sm:text-7xl lg:text-9xl font-normal text-[#283024] leading-[0.95] tracking-tight uppercase mb-3 sm:mb-5 w-full">
           <span className="block">{invitationData.couple.firstPerson}</span>
           <span className="font-serif italic lowercase text-2xl sm:text-5xl lg:text-7xl text-[#A79B89] my-1 sm:my-2 block font-light">&amp;</span>
           <span className="block">{invitationData.couple.secondPerson}</span>
         </h1>
 
-        {/* Engraved Botanical Divider */}
+        {/* Fine Botanical Ornamental Divider */}
         <EngravedDivider className="w-40 sm:w-64 h-8 my-3 sm:my-4 text-[#7D876D]" />
 
         {/* Subtitle / Invitation Text */}
@@ -43,8 +46,8 @@ export const HeroInvitation: React.FC = () => {
           {invitationData.hero.subtitle}
         </p>
 
-        {/* Printed Double-Hairline Date Frame */}
-        <div className="mt-6 sm:mt-8 relative bg-[#F7F3EA] border border-[#697052]/25 p-4 sm:px-12 sm:py-6 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-[#283024] rounded-xs shadow-2xs max-w-lg sm:max-w-none">
+        {/* Printed Double-Hairline Date Frame on Aged Paper Surface */}
+        <div className="mt-6 sm:mt-8 relative bg-[#E8DFCF] border border-[#697052]/25 p-4 sm:px-12 sm:py-6 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-[#283024] rounded-xs shadow-2xs max-w-lg sm:max-w-none">
           <div className="absolute inset-1 border border-[#697052]/15 pointer-events-none rounded-xs" />
           
           <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.22em] font-semibold text-[#697052]">

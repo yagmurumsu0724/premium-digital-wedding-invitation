@@ -3,19 +3,16 @@
 @layer base {
   :root {
     --paper: #F5F0E6;
-    --paper-deep: #EDE5D6;
-    --cream-light: #F7F3EA;
-
-    --sage: #7D876D;
-    --olive: #697052;
-    --olive-deep: #4F563D;
+    --cream: #EFE8DB;
+    --paper-deep: #E8DFCF;
 
     --ink: #283024;
-    --charcoal: #38352F;
-
+    --olive-deep: #4F563D;
+    --olive: #697052;
+    --sage: #7D876D;
     --taupe: #A79B89;
-    --rose: #B9A59A;
     --gold: #AA9669;
+    --rose: #B9A59A;
 
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -48,7 +45,7 @@
   font-family: var(--font-sans);
 }
 
-/* Fine Paper Noise Overlay Layer */
+/* Cotton Paper Noise Overlay Layer */
 .noise-overlay {
   position: fixed;
   top: 0;
