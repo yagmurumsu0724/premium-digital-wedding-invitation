@@ -2,18 +2,18 @@
 
 @layer base {
   :root {
-    --paper: #F5F0E6;
-    --cream-light: #F8F4EC;
-    --cream: #EFE8DB;
-    --paper-deep: #E8DFCF;
+    --archival-parchment: #F4EFE6;
+    --aged-vellum: #EAE0D0;
+    --aged-vellum-deep: #DFD3BF;
 
-    --ink: #283024;
-    --olive-deep: #4F563D;
-    --olive: #697052;
-    --sage: #7D876D;
-    --taupe: #A79B89;
-    --gold: #AA9669;
-    --rose: #B9A59A;
+    --iron-gall-ink: #1E231B;
+    --pressed-olive: #3D4433;
+    --olive-deep: #585E49;
+    --herbarium-sage: #7A856E;
+
+    --antique-brass: #9E8354;
+    --brass-shadow: #786138;
+    --wax-crimson: #6B2D35;
 
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -28,8 +28,8 @@
   }
 
   body {
-    background-color: var(--paper);
-    color: var(--ink);
+    background-color: var(--archival-parchment);
+    color: var(--iron-gall-ink);
     font-family: var(--font-sans);
     overflow-x: hidden;
     margin: 0;
@@ -46,7 +46,17 @@
   font-family: var(--font-sans);
 }
 
-/* Cotton Paper Noise Overlay Layer */
+/* Letterpress Tipo Baskı Effect */
+.letterpress-text {
+  text-shadow: 0 1px 1px rgba(244, 239, 230, 0.8), 0 -1px 1px rgba(30, 35, 27, 0.15);
+}
+
+/* Blind Deboss Kabartma Çukur Frame Effect */
+.deboss-frame {
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.06), inset -1px -1px 2px rgba(244, 239, 230, 0.8);
+}
+
+/* Fine 320gsm Cotton Rag Paper Noise Layer */
 .noise-overlay {
   position: fixed;
   top: 0;
@@ -55,22 +65,23 @@
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Vintage Paper Card & Double Hairline Frame */
 .stationery-card {
-  background-color: var(--paper);
-  border: 1px solid rgba(105, 112, 82, 0.2);
-  box-shadow: 0 6px 24px rgba(40, 48, 36, 0.03);
+  background-color: var(--archival-parchment);
+  border: 1px solid rgba(158, 131, 84, 0.25);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.04), 0 6px 24px rgba(30, 35, 27, 0.03);
   position: relative;
 }
 
 .stationery-card-double {
-  background-color: var(--paper);
-  border: 1px solid rgba(105, 112, 82, 0.25);
-  box-shadow: 0 6px 24px rgba(40, 48, 36, 0.03);
+  background-color: var(--archival-parchment);
+  border: 1px solid rgba(158, 131, 84, 0.3);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.04), 0 6px 24px rgba(30, 35, 27, 0.03);
   position: relative;
 }
 
@@ -78,7 +89,7 @@
   content: '';
   position: absolute;
   inset: 4px;
-  border: 1px solid rgba(105, 112, 82, 0.15);
+  border: 1px solid rgba(158, 131, 84, 0.18);
   pointer-events: none;
 }
 
@@ -97,22 +108,22 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--paper);
+  background: var(--archival-parchment);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--sage);
+  background: var(--herbarium-sage);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--olive);
+  background: var(--pressed-olive);
 }
 
 /* Custom Selection */
 ::selection {
-  background-color: rgba(125, 135, 109, 0.25);
-  color: var(--ink);
+  background-color: rgba(158, 131, 84, 0.25);
+  color: var(--iron-gall-ink);
 }
 
 /* Reduced Motion Override */
