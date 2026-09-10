@@ -13,31 +13,31 @@ export const OpeningCover: React.FC<OpeningCoverProps> = ({ onOpen }) => {
       initial={{ opacity: 1 }}
       exit={{ 
         opacity: 0, 
-        y: -30,
+        y: -25,
         transition: { duration: 1.3, ease: [0.16, 1, 0.3, 1] } 
       }}
       className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[var(--paper)] px-6 text-center overflow-hidden"
     >
       {/* Background paper texture & warm illumination */}
       <div className="absolute inset-0 bg-paper-texture pointer-events-none opacity-90" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--cream-light)]/40 via-transparent to-[var(--ink)]/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[var(--cream-light)]/50 via-transparent to-[var(--ink)]/5 pointer-events-none" />
 
       {/* Main Physical Card Envelope Container */}
       <motion.div 
         initial={{ scale: 0.96, opacity: 0, y: 15 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-        className="relative max-w-lg w-full bg-[var(--paper)] border border-[var(--olive)]/25 p-8 sm:p-14 shadow-xl shadow-[var(--ink)]/5 rounded-xs flex flex-col items-center justify-center my-auto"
+        className="relative max-w-lg w-full bg-[var(--paper)] border border-[var(--olive)]/25 p-8 sm:p-14 shadow-xl shadow-[var(--ink)]/4 rounded-xs flex flex-col items-center justify-center my-auto"
       >
         {/* Double Hairline Vintage Border */}
         <div className="absolute inset-3 border border-[var(--olive)]/15 pointer-events-none rounded-xs" />
 
         {/* 1. Tagline Eyebrow */}
         <motion.p 
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-sans text-[11px] uppercase tracking-[0.28em] text-[var(--sage)] mb-6 font-medium"
+          className="font-sans text-[11px] uppercase tracking-[0.25em] text-[var(--sage)] mb-6 font-medium"
         >
           {invitationData.couple.tagline}
         </motion.p>
@@ -59,7 +59,7 @@ export const OpeningCover: React.FC<OpeningCoverProps> = ({ onOpen }) => {
 
         {/* 3. Couple Names */}
         <motion.h1 
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="font-serif text-3xl sm:text-5xl font-normal text-[var(--ink)] tracking-tight mt-2 mb-2"
@@ -74,20 +74,20 @@ export const OpeningCover: React.FC<OpeningCoverProps> = ({ onOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.65 }}
-          className="font-sans text-xs uppercase tracking-[0.25em] text-[var(--olive)] mb-8 font-medium"
+          className="font-sans text-xs uppercase tracking-[0.22em] text-[var(--olive)] mb-8 font-medium"
         >
           {invitationData.date.display}
         </motion.p>
 
         {/* 5. Minimal Vintage CTA Button */}
         <motion.button
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           onClick={onOpen}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="group relative inline-flex items-center justify-center px-8 py-3 text-xs uppercase tracking-[0.25em] font-medium text-[var(--ink)] bg-transparent border border-[var(--olive)]/60 hover:border-[var(--olive)] hover:bg-[var(--olive)] hover:text-[var(--paper)] transition-all duration-500 rounded-none cursor-pointer focus:outline-none"
+          className="group relative inline-flex items-center justify-center px-8 py-3 text-xs uppercase tracking-[0.22em] font-medium text-[var(--ink)] bg-transparent border border-[var(--olive)]/60 hover:border-[var(--olive)] hover:bg-[var(--olive)] hover:text-[var(--paper)] transition-all duration-500 rounded-none cursor-pointer focus:outline-none"
         >
           <span className="relative z-10 transition-colors duration-500">
             Open Invitation
@@ -96,7 +96,7 @@ export const OpeningCover: React.FC<OpeningCoverProps> = ({ onOpen }) => {
         </motion.button>
 
         <p className="font-sans text-[10px] text-[var(--taupe)] tracking-widest uppercase mt-6 opacity-80">
-          Printed &amp; Sealed with Care
+          PRINTED &amp; SEALED WITH CARE
         </p>
       </motion.div>
     </motion.div>

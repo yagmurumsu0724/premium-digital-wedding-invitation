@@ -18,7 +18,7 @@ export const HeroInvitation: React.FC = () => {
       </div>
 
       <motion.div 
-        initial={{ opacity: 0, y: 25 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         className="max-w-4xl mx-auto flex flex-col items-center z-10"
@@ -28,7 +28,7 @@ export const HeroInvitation: React.FC = () => {
           {invitationData.hero.eyebrow}
         </p>
 
-        {/* Main Couple Names in Printed High-Contrast Serif */}
+        {/* Main Couple Names - Primary Visual Focus */}
         <h1 className="font-serif text-5xl sm:text-7xl lg:text-9xl font-normal text-[var(--ink)] leading-[0.95] tracking-tight uppercase mb-4 sm:mb-6">
           <span className="block">{invitationData.couple.firstPerson}</span>
           <span className="font-serif italic lowercase text-3xl sm:text-5xl lg:text-7xl text-[var(--taupe)] my-2 block font-light">&amp;</span>
@@ -44,7 +44,7 @@ export const HeroInvitation: React.FC = () => {
         </p>
 
         {/* Printed Double-Hairline Date Frame */}
-        <div className="mt-8 relative bg-[var(--cream-light)] border border-[var(--olive)]/25 p-5 sm:px-12 sm:py-6 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-[var(--ink)] rounded-xs">
+        <div className="mt-8 relative bg-[var(--cream-light)] border border-[var(--olive)]/20 p-5 sm:px-12 sm:py-6 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-[var(--ink)] rounded-xs shadow-2xs">
           <div className="absolute inset-1 border border-[var(--olive)]/15 pointer-events-none rounded-xs" />
           
           <span className="font-sans text-xs sm:text-sm uppercase tracking-[0.22em] font-semibold text-[var(--olive)]">
@@ -56,7 +56,7 @@ export const HeroInvitation: React.FC = () => {
           </span>
         </div>
 
-        {/* Scroll CTA Indicator */}
+        {/* Understated Scroll CTA Indicator */}
         <motion.div 
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 2.8, ease: "easeInOut" }}

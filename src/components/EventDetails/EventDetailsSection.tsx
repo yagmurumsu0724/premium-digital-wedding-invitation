@@ -18,75 +18,66 @@ export const EventDetailsSection: React.FC = () => {
           <EngravedDivider className="w-48 h-8 text-[var(--sage)]" />
         </div>
 
-        {/* Minimal Printed Stationery Details Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-          {/* Ceremony Box */}
+        {/* Pure Typography-First Event Layout */}
+        <div className="max-w-2xl mx-auto space-y-16 text-center">
+          {/* Ceremony Event */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="stationery-card-double p-8 sm:p-12 flex flex-col justify-between items-center text-center rounded-xs"
+            className="flex flex-col items-center space-y-3"
           >
-            <span className="font-sans text-xs uppercase tracking-[0.22em] text-[var(--olive)] font-semibold mb-3">
+            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[var(--olive)] font-semibold">
               THE CEREMONY
             </span>
+            
+            <p className="font-serif italic text-3xl sm:text-4xl text-[var(--ink)]">
+              {invitationData.date.ceremonyTime}
+            </p>
 
-            <h3 className="font-serif text-3xl text-[var(--ink)] mb-4 font-normal">
-              Marriage Service
-            </h3>
+            <p className="font-serif text-xl sm:text-2xl text-[var(--charcoal)] font-light">
+              {invitationData.venue.name}
+            </p>
 
-            <div className="w-16 h-[1px] bg-[var(--olive)]/30 my-3" />
+            <p className="font-sans text-xs text-[var(--taupe)] tracking-widest uppercase">
+              {invitationData.venue.address}, {invitationData.venue.city}
+            </p>
 
-            <div className="space-y-2 font-sans text-sm text-[var(--ink)]/85 my-4">
-              <p className="font-medium text-[var(--olive)] tracking-wide uppercase text-xs">
-                {invitationData.date.display}
-              </p>
-              <p className="font-serif italic text-lg text-[var(--charcoal)]">
-                {invitationData.date.ceremonyTime}
-              </p>
-              <p className="text-[var(--taupe)] text-xs tracking-wider uppercase pt-2">
-                The Botanical Glasshouse • Chipping Campden
-              </p>
-            </div>
-
-            <p className="font-sans text-xs text-[var(--sage)] italic mt-6 pt-4 border-t border-[var(--olive)]/15 w-full">
+            <p className="font-sans text-xs text-[var(--sage)] italic pt-2">
               Please arrive 30 minutes prior to the commencement of the service.
             </p>
           </motion.div>
 
-          {/* Reception Box */}
+          {/* Hairline Divider Rule */}
+          <div className="w-32 h-[1px] bg-[var(--olive)]/30 mx-auto" />
+
+          {/* Reception Event */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="stationery-card-double p-8 sm:p-12 flex flex-col justify-between items-center text-center rounded-xs"
+            className="flex flex-col items-center space-y-3"
           >
-            <span className="font-sans text-xs uppercase tracking-[0.22em] text-[var(--olive)] font-semibold mb-3">
+            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[var(--olive)] font-semibold">
               THE RECEPTION
             </span>
 
-            <h3 className="font-serif text-3xl text-[var(--ink)] mb-4 font-normal">
-              Dinner &amp; Dancing
-            </h3>
+            <p className="font-serif italic text-3xl sm:text-4xl text-[var(--ink)]">
+              {invitationData.date.receptionTime} Onwards
+            </p>
 
-            <div className="w-16 h-[1px] bg-[var(--olive)]/30 my-3" />
+            <p className="font-serif text-xl sm:text-2xl text-[var(--charcoal)] font-light">
+              The Grand Pavilion &amp; Terraces
+            </p>
 
-            <div className="space-y-2 font-sans text-sm text-[var(--ink)]/85 my-4">
-              <p className="font-medium text-[var(--olive)] tracking-wide uppercase text-xs">
-                {invitationData.date.display}
-              </p>
-              <p className="font-serif italic text-lg text-[var(--charcoal)]">
-                {invitationData.date.receptionTime} Onwards
-              </p>
-              <p className="text-[var(--taupe)] text-xs tracking-wider uppercase pt-2">
-                The Grand Pavilion &amp; Terraces
-              </p>
-            </div>
+            <p className="font-sans text-xs text-[var(--taupe)] tracking-widest uppercase">
+              Dinner, Toasts &amp; Starlight Dancing
+            </p>
 
-            <p className="font-sans text-xs text-[var(--sage)] italic mt-6 pt-4 border-t border-[var(--olive)]/15 w-full">
-              Followed by candlelit dinner, toasts, and evening celebrations.
+            <p className="font-sans text-xs text-[var(--sage)] italic pt-2">
+              Followed by candlelit dinner and evening celebrations.
             </p>
           </motion.div>
         </div>

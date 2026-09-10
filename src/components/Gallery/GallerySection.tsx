@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { EngravedDivider } from '../Botanical/BotanicalFrame';
+import { EngravedDivider, EngravedCornerAccents } from '../Botanical/BotanicalFrame';
 import { invitationData } from '../../data/invitationData';
 
 export const GallerySection: React.FC = () => {
@@ -59,10 +59,14 @@ export const GallerySection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 onClick={() => setSelectedIndex(index)}
-                className={`group relative overflow-hidden rounded-xs border border-[var(--olive)]/20 bg-[var(--paper-deep)] cursor-pointer shadow-xs ${
+                className={`group relative overflow-hidden rounded-xs border border-[var(--olive)]/20 bg-[var(--paper-deep)] cursor-pointer shadow-2xs ${
                   isFeatured ? 'sm:col-span-2 lg:col-span-2 aspect-[16/10]' : 'aspect-[4/5]'
                 }`}
               >
+                <div className="absolute top-2 left-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <EngravedCornerAccents className="w-12 h-12 text-[var(--paper)]" />
+                </div>
+
                 <img
                   src={item.url}
                   alt={item.caption}
@@ -73,7 +77,7 @@ export const GallerySection: React.FC = () => {
                 {/* Subtle Hover Overlay */}
                 <div className="absolute inset-0 bg-[var(--ink)]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-end p-6 text-[var(--paper)]">
                   <p className="font-serif italic text-lg">{item.caption}</p>
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[var(--cream)] mt-1 font-medium">
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-[var(--cream-light)] mt-1 font-medium">
                     Expand Photo
                   </span>
                 </div>
@@ -83,7 +87,7 @@ export const GallerySection: React.FC = () => {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal in Deep Warm Forest Ink (#283024) */}
       <AnimatePresence>
         {selectedIndex !== null && activeImage && (
           <motion.div
@@ -106,7 +110,7 @@ export const GallerySection: React.FC = () => {
             <button
               onClick={(e) => { e.stopPropagation(); handlePrev(); }}
               aria-label="Previous photo"
-              className="absolute left-4 sm:left-8 text-[var(--paper)] hover:text-[var(--sage)] p-3 focus:outline-none transition-colors z-50 cursor-pointer bg-stone-900/40 hover:bg-stone-900/70 rounded-full"
+              className="absolute left-4 sm:left-8 text-[var(--paper)] hover:text-[var(--sage)] p-3 focus:outline-none transition-colors z-50 cursor-pointer bg-black/40 hover:bg-black/70 rounded-full"
             >
               <ChevronLeft className="w-8 h-8 stroke-[1.5]" />
             </button>
@@ -115,7 +119,7 @@ export const GallerySection: React.FC = () => {
             <button
               onClick={(e) => { e.stopPropagation(); handleNext(); }}
               aria-label="Next photo"
-              className="absolute right-4 sm:right-8 text-[var(--paper)] hover:text-[var(--sage)] p-3 focus:outline-none transition-colors z-50 cursor-pointer bg-stone-900/40 hover:bg-stone-900/70 rounded-full"
+              className="absolute right-4 sm:right-8 text-[var(--paper)] hover:text-[var(--sage)] p-3 focus:outline-none transition-colors z-50 cursor-pointer bg-black/40 hover:bg-black/70 rounded-full"
             >
               <ChevronRight className="w-8 h-8 stroke-[1.5]" />
             </button>
